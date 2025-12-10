@@ -1,0 +1,36 @@
+# 私人数据
+data/
+output/
+backups/
+
+# R历史文件
+.Rhistory
+.Rapp.history
+
+# 会话数据
+.RData
+.RDataTmp
+.Rtmp
+
+# 用户配置文件
+.Ruserdata
+
+# 环境变量文件
+.Renviron
+
+# 项目文件
+.Rproj.user/
+*.Rproj
+.Rprofile
+
+# 包安装文件
+packrat/
+.Rpackages
+
+# 检查文件
+.Rcheck/
+
+# 临时文件
+*~
+*.swp
+*.swo
