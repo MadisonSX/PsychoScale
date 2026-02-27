@@ -1,3 +1,10 @@
+# 脚本名称: 05_FACE总分.R
+# 功能: 导入FACE数据并多重插补，按答案键计分，计算表情与性别得分均值。
+# 输入: data/raw/EpiData_FACE.xls
+#       data/raw/key_face.xlsx
+# 输出: data/processed/EpiData_FACE.rds (原始数据备份)
+#       data/processed/EpiData_FACE_final.xlsx
+
 # 导入excel ----
 
 suppressMessages(EpiData_FACE <- read_excel(here("data", "raw", "EpiData_FACE.xls")))

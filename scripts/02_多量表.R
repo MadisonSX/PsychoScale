@@ -1,7 +1,12 @@
 # 脚本名称: 02_多量表.R
-# 功能: 数据导入和初步检查
-# 输入: 
-# 输出: 
+# 功能: 导入多量表数据，按量表拆分并多重插补，计算各量表总分均值，
+#       导出汇总表与各量表插补数据。
+# 输入: data/raw/RawData.xlsx
+# 输出: data/processed/RawData.rds (原始数据备份)
+#       data/processed/final_row_means.csv
+#       data/processed/final_row_means_rounded.csv
+#       data/processed/Imputed_Data_maxit5_*.xlsx
+#       data/processed/imputation_data_maxit5.RData
 # 作者: Yujie
 # 更新日期: 2025-04-12
 

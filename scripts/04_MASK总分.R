@@ -1,3 +1,10 @@
+# 脚本名称: 04_MASK总分.R
+# 功能: 导入MASK数据并多重插补，按答案键计分，计算各得分类别总分均值。
+# 输入: data/raw/EpiData_MASK.xls
+#       data/raw/key.xlsx
+# 输出: data/processed/EpiData_MASK.rds (原始数据备份)
+#       data/processed/EpiData_MASK_final.xlsx
+
 # 导入excel ----
 
 suppressMessages(EpiData_MASK <- read_excel(here("data", "raw", "EpiData_MASK.xls")))

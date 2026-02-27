@@ -1,3 +1,9 @@
+# 脚本名称: 06_合并表格.R
+# 功能: 读取两份结果表，去重后按ID全连接合并，并输出合并结果表。
+# 输入: data/raw/EpiData_final.xlsx
+#       data/raw/RawData_final.xlsx
+# 输出: data/processed/merged_result.xlsx
+
 # 1. 读取两个Excel文件
 suppressMessages(df1 <- read_excel(here("data", "raw", "EpiData_final.xlsx")))
 suppressMessages(df2 <- read_excel(here("data", "raw", "RawData_final.xlsx")))

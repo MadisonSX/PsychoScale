@@ -1,7 +1,9 @@
 # 脚本名称: 01_单量表.R
-# 功能: 
+# 功能: 导入单量表数据，按变量类型设置插补方法并进行多重插补，
+#       计算量表题目行和并输出均值总分。
 # 输入: data/raw/RawData_emophq.xlsx
-# 输出: 
+# 输出: data/processed/RawData_emophq.rds (原始数据备份)
+#       对象 final_row_means (量表总分均值)
 # 作者: Yujie
 # 更新日期: 2025-04-12
 

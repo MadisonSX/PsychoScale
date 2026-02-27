@@ -1,3 +1,9 @@
+# 脚本名称: 03_分量表求和.R
+# 功能: 读取插补结果，对指定量表子维度按题目求和并汇总均值，
+#       生成分量表分数并导出四舍五入结果。
+# 输入: data/processed/imputation_data_maxit5.RData
+# 输出: data/processed/final_row_means_rounded.xlsx
+
 load(here("data","processed","imputation_data_maxit5.RData"))
 
 # emophq系列只计分前9题 ----
