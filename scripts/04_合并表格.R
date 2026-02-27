@@ -1,12 +1,22 @@
 # 脚本名称: 06_合并表格.R
 # 功能: 读取两份结果表，去重后按ID全连接合并，并输出合并结果表。
 # 输入: data/raw/EpiData_final.xlsx
-#       data/raw/RawData_final.xlsx
+#       data/processed/final_row_means_rounded_multiple.xlsx
 # 输出: data/processed/merged_result.xlsx
+
+# 安装并加载所需包 ----
+required_packages <- c("readxl", "dplyr", "here", "writexl")
+installed_packages <- rownames(installed.packages())
+for (pkg in required_packages) {
+  if (!pkg %in% installed_packages) {
+    install.packages(pkg)
+  }
+  suppressPackageStartupMessages(library(pkg, character.only = TRUE))
+}
 
 # 1. 读取两个Excel文件
 suppressMessages(df1 <- read_excel(here("data", "raw", "EpiData_final.xlsx")))
-suppressMessages(df2 <- read_excel(here("data", "raw", "RawData_final.xlsx")))
+suppressMessages(df2 <- read_excel(here("data", "processed", "final_row_means_rounded_multiple.xlsx")))
 df1$ID <- as.numeric(df1$ID)
 
 # 2. 检查重复ID（以df1为例，df2同理）
