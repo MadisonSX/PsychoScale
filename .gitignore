@@ -1,7 +1,6 @@
 # 私人数据
-data/
+input/
 output/
-backups/
 
 # R历史文件
 .Rhistory

@@ -2,8 +2,8 @@
 # 脚本名称: 01_9量表总分.R
 # 功能: 导入多量表数据，按量表拆分并多重插补，计算各量表总分均值及分量表分数，
 #       生成分量表分数并导出四舍五入结果。
-# 输入: data/raw/RawData_multiple.xlsx
-# 输出: data/processed/final_row_means_rounded_multiple.xlsx
+# 输入: 1st_time/input/RawData_multiple.xlsx
+# 输出: 1st_time/output/final_row_means_rounded_multiple.xlsx
 # 作者: Yujie
 # 更新日期: 2025-04-12
 # ==============================================================================
@@ -23,7 +23,7 @@ source(here("R", "functions.R"))
 
 # 2. 数据导入与基础统计 ===========================================================
 
-suppressMessages(RawData <- read_excel(here("data", "raw", "RawData_multiple.xlsx")))
+suppressMessages(RawData <- read_excel(here("1st_time", "input", "RawData_multiple.xlsx")))
 
 # 计算缺失率情况
 col_miss <- colMeans(is.na(RawData)) * 100
@@ -264,7 +264,7 @@ final_row_means_rounded <- final_row_means %>%
 # 导出结果到Excel
 write.xlsx(
   final_row_means_rounded,
-  here("data", "processed", "final_row_means_rounded_multiple.xlsx")
+  here("1st_time", "output", "final_row_means_rounded_multiple.xlsx")
 )
 
-message("✓ 处理完成！结果已导出至 data/processed/final_row_means_rounded.xlsx")
+message("✓ 处理完成！结果已导出至 1st_time/output/final_row_means_rounded_multiple.xlsx")

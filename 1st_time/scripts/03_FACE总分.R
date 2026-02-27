@@ -1,9 +1,9 @@
 # ==============================================================================
 # 脚本名称: 03_FACE总分.R
 # 功能: 导入FACE数据并多重插补，按答案键计分，计算表情与性别得分均值。
-# 输入: data/raw/RawData_FACE.xls
-#       data/raw/key_FACE.xlsx
-# 输出: data/processed/final_row_means_rounded_FACE.xlsx
+# 输入: 1st_time/input/RawData_FACE.xls
+#       1st_time/input/key_FACE.xlsx
+# 输出: 1st_time/output/final_row_means_rounded_FACE.xlsx
 # ==============================================================================
 
 # 安装并加载所需包 ----
@@ -18,7 +18,7 @@ for (pkg in required_packages) {
 
 # 1. 导入数据 =====================================================================
 
-suppressMessages(EpiData_FACE <- read_excel(here("data", "raw", "RawData_FACE.xls")))
+suppressMessages(EpiData_FACE <- read_excel(here("1st_time", "input", "RawData_FACE.xls")))
 
 # 2. 数据预处理 =====================================================================
 
@@ -68,7 +68,7 @@ imputed_data <- mice(
 
 # 获取所有插补数据集
 imputed_data_list <- complete(imputed_data, action = "all")
-suppressMessages(key <- read_excel(here("data", "raw", "key_FACE.xlsx")))
+suppressMessages(key <- read_excel(here("1st_time", "input", "key_FACE.xlsx")))
 correct_answers <- setNames(as.list(key$key), key$colnames)
 
 # 对每个插补数据集进行计分
@@ -113,6 +113,6 @@ final_row_means_rounded <- final_row_means %>%
 
 write_xlsx(
   final_row_means_rounded,
-  here("data", "processed", "final_row_means_rounded_FACE.xlsx")
+  here("1st_time", "output", "final_row_means_rounded_FACE.xlsx")
 )
 
