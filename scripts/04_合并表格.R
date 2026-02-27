@@ -1,4 +1,4 @@
-# 脚本名称: 06_合并表格.R
+# 脚本名称: 04_合并表格.R
 # 功能: 读取两份结果表，去重后按ID全连接合并，并输出合并结果表。
 # 输入: data/raw/EpiData_final.xlsx
 #       data/processed/final_row_means_rounded_multiple.xlsx
