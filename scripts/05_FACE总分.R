@@ -96,5 +96,3 @@ write_xlsx(
   here("data", "processed", "EpiData_FACE_final.xlsx"),    # 输出路径
 )
 
-# 备份 ----
-backup_workspace()

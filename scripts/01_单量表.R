@@ -88,6 +88,3 @@ all_row_sums <- do.call(cbind, lapply(imputed_list_with_sum, `[[`, "row_sum"))
 
 # 输出最终行和的均值
 final_row_means <- rowMeans(all_row_sums)
-
-# 备份 ----
-backup_workspace()

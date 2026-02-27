@@ -55,6 +55,3 @@ write_xlsx(
   merged_df,          # 要导出的数据框
   here("data", "processed", "merged_result.xlsx"),    # 输出路径
 )
-
-# 备份 ----
-backup_workspace()

@@ -102,6 +102,3 @@ write_xlsx(
   final_row_means,          # 要导出的数据框
   here("data", "processed", "EpiData_MASK_final.xlsx"),    # 输出路径
 )
-
-# 备份 ----
-backup_workspace()

@@ -151,5 +151,3 @@ dataset_names <- paste0("imputed_data_maxit5_", patterns)
 existing_datasets <- dataset_names[sapply(dataset_names, exists)]
 save(list = existing_datasets,final_row_means, file = here("data","processed","imputation_data_maxit5.RData"))
 
-# 备份 ----
-backup_workspace()
